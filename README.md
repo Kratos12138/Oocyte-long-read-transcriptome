@@ -31,6 +31,6 @@ If you use this code, please cite our study:
   author = {Wang et al.},
   journal = {bioRxiv},
   year = {2025},
-  doi = {10.1101/xxxxxx},
-  url = {[https://www.biorxiv.org/content/10.1101/xxxxxx](https://www.biorxiv.org/content/10.1101/xxxxxx)}
+  doi = {https://doi.org/10.1101/2025.06.17.659919},
+  url = {[https://www.biorxiv.org/content/10.1101/2025.06.17.659919v1.full](https://www.biorxiv.org/content/10.1101/2025.06.17.659919v1.full)}
 }
