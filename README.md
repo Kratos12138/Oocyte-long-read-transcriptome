@@ -37,7 +37,7 @@ if (!require("BiocManager", quietly = TRUE))
     install.packages("BiocManager")
 BiocManager::install(c("IsoformSwitchAnalyzeR", "ComplexHeatmap"))
 
-### Installation
+### Citation
 @article{author2025,
   title = {Single oocyte full-length isoform sequencing unveils the impact of transposable elements on RNA diversity and stability during oocyte maturation},
   author = {Wang et al.},
