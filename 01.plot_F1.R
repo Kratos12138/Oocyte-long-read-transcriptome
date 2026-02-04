@@ -15,6 +15,7 @@ library(ComplexHeatmap)
 #----figure1 dominant isoform
 gene_expr_quint_colors <- c( 
   "#dae8f0","#BFD8E7","#6AACD5","#2F82BE","#07529C")
+dominant_dt<-fread("../Fig1c.dominant_isoform.csv")
 
 p<-ggplot(dominant_dt, aes(x = dominant_fraction, fill = factor(gene_expr_quintile)) )+
   geom_histogram(alpha = 0.75,binwidth = .05) +
@@ -56,5 +57,6 @@ Fig2.1 <- df %>%
   ggtitle("oocyte maturation genes ~ transcripts ")
 Fig2.1
 dev.off()
+
 
 
