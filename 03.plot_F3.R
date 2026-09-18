@@ -151,7 +151,7 @@ mytheme <- theme(axis.line = element_line(colour = "black"),
                  axis.text.y= element_text(size=14,  family="ArialMT"))
 
 
-p3 <- ggplot(plot_samp, aes(x = stage, y = ratio_median*100, 
+p3 <- ggplot(plot_samp, aes(x = stage, #y = ratio_median, #y = ratio_median*100, 
                             group = interaction(species, Structural_Category),
                             linetype = species, color = Structural_Category)) +
   #geom_ribbon(aes(ymin = ratio_min*100, ymax = ratio_max*100, fill = Structural_Category), alpha = 0.5) +
@@ -192,7 +192,7 @@ plot_samp <- plot_samp %>%
          ratio_median = median(ratio, na.rm = TRUE) )
 
 # 折线图
-p4 <- ggplot(plot_samp, aes(x = stage, y = ratio_median*100, 
+p4 <- ggplot(plot_samp, aes(x = stage, y = ratio_median, #y = ratio_median*100, 
                             group = interaction(species, subcategory),
                             linetype = species, color = subcategory)) +
   #geom_ribbon(aes(ymin = ratio_min*100, ymax = ratio_max*100, fill = subcategory), alpha = 0.5) +
@@ -208,7 +208,7 @@ p4
 
 # fwrite(plot_samp, file = "./table/F3D.SD.t01.ISM.dynamic.txt",sep = "\t")
 # sd <- plot_samp[,c("subcategory","stage","ratio_median")] %>% distinct(.,.keep_all = T)
-# sd$ratio_median <- sd$ratio_median*100
+# sd$ratio_median <- sd$ratio_median
 ggsave(p4, filename = "./fig/F3D.ISM.dynamic.pdf",width = 8,height = 6)
 fwrite(sd, file = "./table_260128/F3D.txt",sep = "\t")
 
