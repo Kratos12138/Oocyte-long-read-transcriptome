@@ -151,7 +151,7 @@ mytheme <- theme(axis.line = element_line(colour = "black"),
                  axis.text.y= element_text(size=14,  family="ArialMT"))
 
 
-p3 <- ggplot(plot_samp, aes(x = stage, #y = ratio_median, #y = ratio_median*100, 
+p3 <- ggplot(plot_samp, aes(x = stage, y = ratio_median, #y = ratio_median*100, 
                             group = interaction(species, Structural_Category),
                             linetype = species, color = Structural_Category)) +
   #geom_ribbon(aes(ymin = ratio_min*100, ymax = ratio_max*100, fill = Structural_Category), alpha = 0.5) +
